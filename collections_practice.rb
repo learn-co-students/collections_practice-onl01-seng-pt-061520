@@ -61,12 +61,19 @@ def sum_array(array)
 end
 
 def add_s(array)
-  i = 0
-  while i < array.length
-    if i != 1
-      array[i]= "#{array[i]}s"
+  # i = 0
+  # while i < array.length
+  #   if i != 1
+  #     array[i]= "#{array[i]}s"
+  #   end
+  #   i += 1
+  # end
+  # array
+  array.each_with_index.collect do |elem, index|
+    if index != 1
+      elem= "#{elem}s"
+    elsif index == 1
+      elem= elem
     end
-    i += 1
   end
-  array
 end
