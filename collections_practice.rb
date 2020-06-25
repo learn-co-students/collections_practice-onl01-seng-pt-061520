@@ -40,3 +40,4 @@ def sum_array(array)
 end
 
 def add_s(array)
+  array.collect{|i| i == array[1] ? i:i << "s"}
