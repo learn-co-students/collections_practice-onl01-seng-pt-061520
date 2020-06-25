@@ -9,3 +9,11 @@ def sort_array_desc(descending)
     b <=> a
   end
 end
+
+def sort_array_char_count(count)
+  count.sort do |a, b|
+    a.size <=> b.size
+  end
+end
+
+def s
