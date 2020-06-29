@@ -17,8 +17,8 @@ def sort_array_char_count(array)
 end
 
 def swap_elements(array)
-  array.sort do |b, c|
-    b[2] <=> c[1] 
+  array.sort do |a, b|
+    a[1] <=> b[2] 
   end
 end
 
@@ -27,9 +27,7 @@ def reverse_array(array)
 end
 
 def kesha_maker(array)
-  new_array = []
   array.each do |string|
-    string.split(",")
     string[2] = "$"
   end
 end
@@ -43,6 +41,11 @@ def sum_array(array)
 end
 
 def add_s(array)
-  array.collect.each_with_index{|element, index| element + "s"}
-  return ["hands", "feet", "knees", "tables"]
+  array.collect.each_with_index do |element, index|
+    if index == 1 
+      element
+    else
+      element + "s"
+    end
+  end
 end
